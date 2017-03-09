@@ -4,4 +4,4 @@
 
 Implementation for Homework 2, Part 3 of CS267: Applications of Parallel Computing
 
-Problem: GPU enabled particle simulation
+Problem: GPU enabled particle simulation for use on TACC's Stampede supercomputing cluster.
