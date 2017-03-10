@@ -106,6 +106,18 @@ int main( int argc, char **argv )
 
     set_size( n );
 
+    //
+    //  compute grid and bin parameters
+    //
+    int target_particles_per_bin = 25;
+    int num_bins = n/target_particles_per_bin;
+    if(n%target_particles_per_bin != 0) {
+        num_bins++;
+    }
+    int grid_dim = sqrt(num_bins) + 1;
+    num_bins = grid_dim * grid_dim;
+    double bin_length = get_size(n)/grid_dim;
+
     init_particles( n, particles );
 
     cudaThreadSynchronize();
